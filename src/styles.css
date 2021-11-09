@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+body {
+  background-color: rgba(245, 241, 241, 0.25);
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 780px;
+  text-align: center;
+}
+
+.search-bar {
+  max-width: 400px;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.recipes-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -6,19 +6,48 @@
 }
 
 body {
-  background-color: rgba(245, 241, 241, 0.25);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 .App {
   margin: 0 auto;
-  max-width: 780px;
+  padding: 1rem 0;
+  max-width: 90vw;
   text-align: center;
 }
 
 .search-bar {
-  max-width: 400px;
-  border-radius: 0.25rem;
+  max-width: 60vw;
+  min-width: 250px;
+  border: 1px solid rgb(250, 172, 185);
+  border-radius: 0.5rem;
   background-color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.search-input {
+  width: 80%;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: rgb(255, 246, 247);
+  height: 100%;
+  outline: none;
+}
+
+.search-btn {
+  width: 20%;
+  padding: 0.5rem 1rem;
+  background-color: #f8dce3;
+  color: rgb(70, 66, 66);
+  border: none;
+  transition: all, 0.3s;
+}
+
+.search-btn:hover {
+  background-color: rgb(250, 172, 185);
 }
 
 .recipes-container {

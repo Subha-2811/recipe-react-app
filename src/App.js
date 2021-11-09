@@ -44,7 +44,7 @@ const App = () => {
           className="search-input"
         ></input>
         <button className="search-btn" type="submit">
-          Search
+          <i class="large search icon"></i>
         </button>
       </form>
       <br />

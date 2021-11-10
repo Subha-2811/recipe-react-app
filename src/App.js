@@ -40,11 +40,12 @@ const App = () => {
         <input
           value={searchData}
           onChange={onChangeHandler}
+          placeholder="Search"
           type="search"
           className="search-input"
         ></input>
         <button className="search-btn" type="submit">
-          <i class="large search icon"></i>
+          <i class="fas fa-search"></i>
         </button>
       </form>
       <br />

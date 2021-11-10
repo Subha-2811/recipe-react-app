@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .App {
@@ -35,6 +35,7 @@ body {
   background-color: rgb(255, 246, 247);
   height: 100%;
   outline: none;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .search-btn {

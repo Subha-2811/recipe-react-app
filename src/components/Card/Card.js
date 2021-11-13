@@ -1,15 +1,7 @@
 import "./card.css";
 import React from "react";
 
-const Card = ({ title, image, calories, ingredientList }) => {
-  // const ingredients = () => {
-  //   if (props.recipe.length() === 0) {
-  //     return null;
-  //   }
-  //   return props.recipe.ingredientLines.map((i) => {
-  //     return <li>{i}</li>;
-  //   });
-  // };
+const Card = ({ title, image, calories, ingredients }) => {
   console.log(`${title} ${image}`);
   return (
     <div className="card" key={title}>
@@ -18,8 +10,20 @@ const Card = ({ title, image, calories, ingredientList }) => {
       </div>
       <div className="card-content">
         <h3 className="primary-heading">{title}</h3>
-        <p>{calories}</p>
+        <p className="calories">
+          <i className="fas fa-fire u-margin-right"></i>
+          {Math.round(calories * 100) / 100} Cal.
+        </p>
         {/* <ul>{ingredients()}</ul> */}
+        <ul className="ingredient-list">
+          {ingredients.map((ingredient) => {
+            return (
+              <li className="ingredient-text" key={ingredient.food}>
+                {ingredient.text} - ({ingredient.food})
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

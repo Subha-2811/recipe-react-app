@@ -10,18 +10,26 @@ const App = () => {
 
   const APP_ID = "de0b53f1";
   const APP_KEY = "ed79059a4f5878928572c517b1e5fcac";
-  const API_REQUEST = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+  // const API_REQUEST = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
   useEffect(() => {
+    const fetchRecipes = async () => {
+      const response = await fetch(
+        `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      );
+      const data = await response.json();
+      console.log(data);
+      setRecipes(data.hits);
+    };
     fetchRecipes();
   }, [query]);
 
-  const fetchRecipes = async () => {
-    const response = await fetch(API_REQUEST);
-    const data = await response.json();
-    console.log(data);
-    setRecipes(data.hits);
-  };
+  // const fetchRecipes = async () => {
+  //   const response = await fetch(API_REQUEST);
+  //   const data = await response.json();
+  //   console.log(data);
+  //   setRecipes(data.hits);
+  // };
 
   const onChangeHandler = (event) => {
     setSearchData(event.target.value);
@@ -45,7 +53,7 @@ const App = () => {
           className="search-input"
         ></input>
         <button className="search-btn" type="submit">
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </button>
       </form>
       <br />
